@@ -69,7 +69,9 @@ On your prompt / terminal navigate to ios folder of your project and type the fo
 ### Step 5: Add App Groups 
 
 Select the target of your project on XCode and go to: "Signing & Capabilites" >  "+ Capabillity" and add App Groups 
+
 ![Screen Shot 2022-07-01 at 11 25 32](https://user-images.githubusercontent.com/95364508/176913453-7dc62f73-4651-4a28-bf34-0521a6cbba0e.png)
+
 After  that, select  the  groups
 
 ![Screen Shot 2022-07-01 at 11 27 36](https://user-images.githubusercontent.com/95364508/176913815-3a91b0f4-d5ae-4d6d-ad58-536a4d445cf9.png)
