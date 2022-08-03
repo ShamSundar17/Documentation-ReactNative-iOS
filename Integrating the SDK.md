@@ -70,13 +70,15 @@ and buttons. To enable this functionality it is necessary to create a Service Ex
  File > New > Target and select Notification Service Extension
  	 ![image](https://user-images.githubusercontent.com/95364508/182460305-a1ee5087-67a5-4525-9d73-c190d4c09a41.png)
 	 
--- Make sure iOS version 12.0 or greater is selected for this Target
+ Make sure iOS version 12.0 or greater is selected for this Target
+
 ![Screen Shot 2022-08-02 at 16 48 17](https://user-images.githubusercontent.com/95364508/182460713-1ed26cb3-b8cf-4636-bb9a-5405fcaff6ec.png)
 
--- On "Frameworks and Libraries" include the SDK and also make sure in option Embed, select "Do Not Embed"
+ On "Frameworks and Libraries" include the SDK and also make sure in option Embed, select "Do Not Embed"
+
 ![Screen Shot 2022-08-03 at 09 27 16](https://user-images.githubusercontent.com/95364508/182607426-2a7c3d3d-4317-4856-8293-db55ca6080d8.png)
 
--- In NotificationService.m, include the call to the framework so that it presents the media in the notification:
+In NotificationService.m file, include the call to the framework so that it presents the media in the notification:
    
 
     - (**void**)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(**void** (^)(UNNotificationContent * **_Nonnull**))contentHandler {
@@ -140,7 +142,7 @@ You would need to update the value of  **organization**  and  **organizationId**
 
 Sample plist file looks as below:
 
-![](https://files.readme.io/210c2fa-8ef4d9a-image1.png)![](https://files.readme.io/210c2fa-8ef4d9a-image1.png "Click to close...")
+![](https://files.readme.io/210c2fa-8ef4d9a-image1.png)
 
 ### Step 7: Add Permissions
 
@@ -153,13 +155,13 @@ DR SDK needs few permissions which are listed below:
     -   fetch
     -   remote-notification
 
-![](https://files.readme.io/d0cb117-d85c033-image3.png)![](https://files.readme.io/d0cb117-d85c033-image3.png "Click to close...")
+![](https://files.readme.io/d0cb117-d85c033-image3.png)
 
 Below image helps you configuring the Background mode
 
-![](https://files.readme.io/70f0ef6-11a85f0-image4.gif)![](https://files.readme.io/70f0ef6-11a85f0-image4.gif "Click to close...")
+![](https://files.readme.io/70f0ef6-11a85f0-image4.gif)
 
-## **4. Add App Groups**
+## STEP 8: Add App Groups**
 
 [](https://developers.digitalreef.com/docs/integration-of-dr-ios-react-native-sdk#4-add-app-groups)
 
@@ -187,7 +189,7 @@ Add the following App Groups to
 
 Once added it would be similar to the image below
 
-![](https://files.readme.io/e2c462c-fe2c7cf-image5.png)![](https://files.readme.io/e2c462c-fe2c7cf-image5.png "Click to close...")
+![](https://files.readme.io/e2c462c-fe2c7cf-image5.png)
 
 > ### ❗
 > 
