@@ -1,8 +1,8 @@
-## 
-
-**Installation of DR SDK**
+# **Installation of DR SDK**
 
 [](https://developers.digitalreef.com/docs/integration-of-dr-ios-react-native-sdk#installation-of-dr-sdk)
+## Integration Overview 
+![Screen Shot 2022-08-03 at 15 41 44](https://user-images.githubusercontent.com/95364508/182685046-3fa9dfed-070a-4423-aa2f-45b3bba09157.png)
 
 ### Step 1 : Extract
 
@@ -161,7 +161,7 @@ Below image helps you configuring the Background mode
 
 ![](https://files.readme.io/70f0ef6-11a85f0-image4.gif)
 
-## STEP 8: Add App Groups**
+## STEP 8: Add App Groups
 
 [](https://developers.digitalreef.com/docs/integration-of-dr-ios-react-native-sdk#4-add-app-groups)
 
