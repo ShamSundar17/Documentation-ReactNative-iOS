@@ -62,33 +62,6 @@ On successful completion of the command you would be able to see a message simil
 
 
 ```
- ### Step 4.2 : Enabling Rich Media and Push Buttons
-
-As of iOS 10, it is possible to send attachments in the body of the push in the formats of images, gifs or videos 
-and buttons. To enable this functionality it is necessary to create a Service Extension.
-
- File > New > Target and select Notification Service Extension
- 	 ![image](https://user-images.githubusercontent.com/95364508/182460305-a1ee5087-67a5-4525-9d73-c190d4c09a41.png)
-	 
- Make sure iOS version 12.0 or greater is selected for this Target
-
-![Screen Shot 2022-08-02 at 16 48 17](https://user-images.githubusercontent.com/95364508/182460713-1ed26cb3-b8cf-4636-bb9a-5405fcaff6ec.png)
-
- On "Frameworks and Libraries" include the SDK and also make sure in option Embed, select "Do Not Embed"
-
-![Screen Shot 2022-08-03 at 09 27 16](https://user-images.githubusercontent.com/95364508/182607426-2a7c3d3d-4317-4856-8293-db55ca6080d8.png)
-
-In NotificationService.m file, include the call to the framework so that it presents the media in the notification:
-   
-
-    - (**void**)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(**void** (^)(UNNotificationContent * **_Nonnull**))contentHandler {
-    
-    **self**.contentHandler = contentHandler;
-    
-    **self**.bestAttemptContent = [request.content mutableCopy];
-    
-    [DigitalReef  includeMediaAttachmentWithRequest:request mutableContent:**self**.bestAttemptContent  contentHandler:**self**.contentHandler];
-
 ### Step 5 : Pod Install
 
 [](https://developers.digitalreef.com/docs/integration-of-dr-ios-react-native-sdk#step-5--pod-install)
@@ -99,6 +72,9 @@ On your prompt / terminal navigate to ios folder of your project and type the fo
 pod install
 
 ```
+### Step 5.1 : Go to iOS Folder in react native project
+
+Open projectName.xcworkspace file in Xcode
 
 ### Step 6: Add Local Config file
 
@@ -196,3 +172,31 @@ Once added it would be similar to the image below
 > App Groups Naming
 > 
 > AppGroups string must be different for each host application otherwise there will be a shared database storage and shared user defaults storage between different apps.
+
+ ### Step 9 : Enabling Rich Media and Push Buttons
+
+Open projectName.xcworkspace file in Xcode.
+As of iOS 10, it is possible to send attachments in the body of the push in the formats of images, gifs or videos 
+and buttons. To enable this functionality it is necessary to create a Service Extension.
+
+ File > New > Target and select Notification Service Extension
+ 	 ![image](https://user-images.githubusercontent.com/95364508/182460305-a1ee5087-67a5-4525-9d73-c190d4c09a41.png)
+	 
+ Make sure iOS version 12.0 or greater is selected for this Target
+
+![Screen Shot 2022-08-02 at 16 48 17](https://user-images.githubusercontent.com/95364508/182460713-1ed26cb3-b8cf-4636-bb9a-5405fcaff6ec.png)
+
+ On "Frameworks and Libraries" include the SDK and also make sure in option Embed, select "Do Not Embed"
+
+![Screen Shot 2022-08-03 at 09 27 16](https://user-images.githubusercontent.com/95364508/182607426-2a7c3d3d-4317-4856-8293-db55ca6080d8.png)
+
+In NotificationService.m file, include the call to the framework so that it presents the media in the notification:
+   
+
+    - (**void**)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(**void** (^)(UNNotificationContent * **_Nonnull**))contentHandler {
+    
+    **self**.contentHandler = contentHandler;
+    
+    **self**.bestAttemptContent = [request.content mutableCopy];
+    
+    [DigitalReef  includeMediaAttachmentWithRequest:request mutableContent:**self**.bestAttemptContent  contentHandler:**self**.contentHandler];
